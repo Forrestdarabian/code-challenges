@@ -257,3 +257,88 @@ function convert(hours, minutes) {
   const minutesConversion = minutes * 60;
   return hoursConversion + minutesConversion;
 }
+
+// In this challenge, you must verify the equality of two different given parameters: a and b.
+
+// Both the value and the type of parameters need to be tested in order to have an matching equality. The possible types of the given parameters are:
+
+// Numbers
+// Strings
+// Booleans (false or true)
+// Special values: undefined, null and NaN
+// What have you learnt so far that will permit you to do two different checks (value and type) with a single statement?
+
+// Implement a function that returns true if the parameters are equal, and false if they are different.
+
+// Examples
+// checkEquality(1, true) ➞ false
+// // A number and a boolean: their type is different
+
+// checkEquality(0, "0") ➞ false
+// // A number and a string: their type is different
+
+// checkEquality(1,  1) ➞ true
+// // A number and a number: their type and value are equal
+
+function checkEquality(a, b) {
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// Create a function that returns the number of frames shown in a given number of minutes for a certain FPS.
+
+// Examples
+// frames(1, 1) ➞ 60
+
+// frames(10, 1) ➞ 600
+
+// frames(10, 25) ➞ 15000
+// Notes
+// FPS stands for "frames per second" and it's the number of frames a computer screen shows every second.
+// Assume the screen produces 60 frames every second.
+
+function frames(minutes, fps) {
+  answer = minutes * fps * 60;
+  return answer;
+}
+
+// Create a function that takes in three arguments (prob, prize, pay) and returns true if prob * prize > pay; otherwise return false.
+
+// To illustrate, profitableGamble(0.2, 50, 9) should yield true, since the net profit is 1 (0.2 * 50 - 9), and 1 > 0.
+
+// Examples
+// profitableGamble(0.2, 50, 9) ➞ true
+
+// profitableGamble(0.9, 1, 2) ➞ false
+
+// profitableGamble(0.9, 3, 2) ➞ true
+// Notes
+// A profitable gamble is a game that yields a positive net profit, where net profit is calculated in the following manner: net_outcome = probability_of_winning * prize - cost_of_playing.
+
+function profitableGamble(prob, prize, pay) {
+  if (prob * prize > pay) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// Create a function that takes an integer and returns true if it's divisible by 100, otherwise return false.
+
+// Examples
+// divisible(1) ➞ false
+
+// divisible(1000) ➞ true
+
+// divisible(100) ➞ true
+
+function divisible(num) {
+  if (num % 100) {
+    return false;
+  } else {
+    return true;
+  }
+}
