@@ -342,3 +342,60 @@ function divisible(num) {
     return true;
   }
 }
+
+// Given two integers, a and b, return true if a can be divided evenly by b. Return false otherwise.
+
+// Examples
+// dividesEvenly(98, 7) ➞ true
+// # 98/7 = 14
+
+// dividesEvenly(85, 4) ➞ false
+// # 85/4 = 21.25
+// Notes
+// a will always be greater than or equal to b.
+
+function dividesEvenly(a, b) {
+  if (Number.isInteger(a / b)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// Write a function that returns the length of a string. Make your function recursive.
+
+// Examples
+// length("apple") ➞ 5
+
+// length("make") ➞ 4
+
+// length("a") ➞ 1
+
+// length("") ➞ 0
+
+function length(str) {
+  if (str.length > 0) {
+    return str.length;
+  } else {
+    return 0;
+  }
+}
+
+// Create a function that returns true if a string is empty and false otherwise.
+
+// Examples
+// isEmpty("") ➞ true
+
+// isEmpty(" ") ➞ false
+
+// isEmpty("a") ➞ false
+// Notes
+// A string containing only whitespaces " " does not count as empty.
+
+function isEmpty(s) {
+  if (s.length > 0) {
+    return false;
+  } else {
+    return true;
+  }
+}
