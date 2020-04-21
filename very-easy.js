@@ -399,3 +399,59 @@ function isEmpty(s) {
     return true;
   }
 }
+
+// Given two strings, firstName and lastName, return a single string in the format "last, first".
+
+// Examples
+// concatName("First", "Last") ➞ "Last, First"
+
+// concatName("John", "Doe") ➞ "Doe, John"
+
+// concatName("Mary", "Jane") ➞ "Jane, Mary"
+
+function concatName(firstName, lastName) {
+  const answer = lastName.concat(", ", firstName);
+  return answer;
+}
+
+// You can assign variables from arrays like this:
+
+// const arr = [1, 2, 3, 4, 5, 6]
+// let a = arr[0]
+// let b = arr[1]
+
+// console.log(a) // outputs 1
+// console.log(b) // outputs 2
+// With ES6, you can assign variables from arrays in a much more succinct way. Create variables a and b from the given array using the ES6 destructuring assignment syntax (check the Resources tab for more examples), where a === 1 and b === 2.
+
+const arr = [1, 2, 3, 4, 5, 6];
+const a = arr[0];
+const b = arr[1];
+
+// Write a function to reverse an array.
+
+// Examples
+// reverse([1, 2, 3, 4]) ➞ [4, 3, 2, 1]
+
+// reverse([9, 9, 2, 3, 4]) ➞ [4, 3, 2, 9, 9]
+
+// reverse([]) ➞ []
+
+function reverse(arr) {
+  const reversedArr = arr.reverse(arr);
+  return reversedArr;
+}
+
+// Create a function that accepts an array and returns the last item in the array.
+
+// Examples
+// getLastItem([1, 2, 3]) ➞ 3
+
+// getLastItem(["cat", "dog", "duck"]) ➞ "duck"
+
+// getLastItem([true, false, true]) ➞ true
+
+function getLastItem(arr) {
+  const last = arr.pop();
+  return last;
+}
