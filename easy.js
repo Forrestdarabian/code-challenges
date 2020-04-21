@@ -346,3 +346,59 @@ function getAbsSum(arr) {
     return answer;
   }
 }
+
+// Given a number n, write a function that returns PI to n decimal places.
+
+// Examples
+// myPi(5) ➞ 3.14159
+
+// myPi(4) ➞ 3.1416
+
+// myPi(15) ➞ 3.141592653589793
+// Notes
+// n will not be above 15, to keep this challenge simple.
+// Round up the last digit if the next digit in PI is greater or equal to 5 (see second example above).
+// The return value must be a number, not a string.
+
+function myPi(n) {
+  const pi = Math.PI;
+  const answer = Number.parseFloat(pi).toFixed(n);
+  return Number.parseFloat(answer);
+}
+
+// Create a function that returns the number of decimal places a number (given as a string) has. Any zeros after the decimal point count towards the number of decimal places.
+
+// Examples
+// getDecimalPlaces("43.20") ➞ 2
+
+// getDecimalPlaces("400") ➞ 0
+
+// getDecimalPlaces("3.1") ➞ 1
+// Notes
+// Return 0 if the number doesn't have any decimal places (see example #2).
+
+function getDecimalPlaces(num) {
+  if (num.includes(".")) {
+    return num.split(".")[1].length;
+  } else {
+    return 0;
+  }
+}
+
+// Create a function that takes in an array of numbers and returns the sum of its cubes.
+
+// Examples
+// sumOfCubes([1, 5, 9]) ➞ 855
+// // Since 1^3 + 5^3 + 9^3 = 1 + 125 + 729 = 855
+
+// sumOfCubes([3, 4, 5]) ➞ 216
+
+// sumOfCubes([2]) ➞ 8
+
+// sumOfCubes([]) ➞ 0
+// Notes
+// If given an empty array, return 0.
+
+function sumOfCubes(nums) {
+  return nums.reduce((a, b) => a + Math.pow(b, 3), 0);
+}
