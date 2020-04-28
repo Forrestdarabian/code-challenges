@@ -63,8 +63,17 @@ function frequencyQueries(queries) {
     }
     // If the action is 3 we check whether the value in our frequencyTracker is "true" or "not 0" or "nor undefined".
     if (action === 3) {
+      // if its greater than 0, return one, else return 0
       result.push(frequencyTracker[value] > 0 ? 1 : 0);
     }
   }
   return result;
+}
+
+function countSignals(frequencies, filterRanges) {
+  if (frequencies > filterRanges[0] && frequencies < filterRanges[1]) {
+    return frequencies.length();
+  } else {
+    return false;
+  }
 }

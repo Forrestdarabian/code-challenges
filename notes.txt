@@ -1,0 +1,76 @@
+1. Responsive design concepts
+- Responsive design is an approach to web page creation that makes
+use of flexible layouts, flexible images and cascading style sheet media queries.
+The goal of responsive design is to build web pages that detect the visitor's screen size and orientation and change the layout accordingly.
+
+2. Accessibility
+- Accessibility is the practice of making your websites usable by as many people as possible.
+Such as those using mobile devices, or those with slow network connections.
+Semantic HTML, which improves accessibility, also improves SEO, making your site more findable.
+ 
+3. State management
+- What is “state”?
+The state is all of the information that is retained by your program, often with respect to previous events or interactions. 
+- What is “state management”?
+State management is a method of managing state. In front-end web development, the DOM can manage the state of forms
+without you having to do anything (i.e. it remembers user inputs) Some examples are (such as Angular’s $scope, React’s component state, or Redux’s state container).
+- Why does it matter?
+State can be a messy part of application development, especially when there are a lot of user interactions to manage.
+While the DOM can certainly get you quite a ways if you have a particularly complex application
+it may get messy trying to keep everything straight. Carefully choosing how you’re going to 
+manage state will help you (and, more importantly, future developers of your application - to include future you) 
+realize where state may be mutated, the potential follow-on effects, and help with future debugging.
+
+4. Client-side app security
+- This refers to those that occur on the client / user's computer system, rather than on the server side, or in between the two.
+
+5. Automated testing
+- Automated testing is a process that validates if software is functioning appropriately and meeting requirements 
+before it is released into production. This software testing method uses scripted sequences that are executed by testing tools.
+Automated testing tools execute examinations of the software, report outcomes and compare results with earlier test runs.
+
+6. Asynchronous patterns
+- They operate in a separate order than the rest of the code via the event loop, returning an implicit Promise as its result
+
+7. Code organization and readability
+
+8. Understanding of when and why to use various back end technology
+
+9. Data validation
+- Validating the accuracy, clarity, and details of your data is necessary to mitigate any project defects. 
+Without validating your data, you run the risk of basing decisions on data with imperfections 
+that are not accurately representative of the situation at hand.
+
+10. Error handling
+- Usually, a script “dies” (immediately stops) in case of an error, printing it to console.
+But there’s a syntax construct try..catch that allows us to “catch” errors so the script can, instead of dying, do something more reasonable.
+
+11. Data persistence
+- Persistent data in the field of data processing denotes information that is infrequently accessed and not likely to be modified.
+Static data is information, for example, a record, that does not change and may be intended to be permanent. 
+It may have previously been categorized as persistent or dynamic.
+
+12. Security first mindset
+- Security through Obscurity: Keeping your system safe because attackers don’t know where it is, 
+what it does, how it works, why it’s there, who owns it, etc.
+Security through Ignorance: Keeping your system safe by completely ignoring the fact that computer security exists, 
+bad guys aren’t real and don’t care about your company, and vulnerabilities are a myth.
+Security by Design/Default: you should keep your apps safe by designing it to be security from the ground up.
+
+13. What is a Higher Order Function, and Callback?
+- Anything that takes a function as an argument, returns a function, OR both is a Higher Order Function,
+So .map() is a higher order function since it takes a function as an argument.
+const example = () => () => {} This is a higher order function since it returns a function.
+And connect()  (from Redux) is a Higher Order Component (which is just a function) that takes a Component (just a function) and returns a Component which is doing both.
+
+14. Where have you used Higher Order Components?
+- .map() and connect() in How-To App
+
+15. What is State Management and where have you used it?
+- new-tutorial.js in How-To App
+
+16. How have you used routing in React?
+- app.js in How-To App
+
+17. How have you used routing in Express?
+-usersRouter, celebsRouter, and server.js
