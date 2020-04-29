@@ -22,7 +22,7 @@ function equalizeArray(arr) {
 }
 
 function frequencyQueries(queries) {
-  // first we define our variables and simply set them all to an array at first
+  // first we define our variables
   const frequencies = [];
   // amount each frequency occurs
   const frequencyTracker = [];
