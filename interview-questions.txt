@@ -1,0 +1,118 @@
+Tell me about yourself.
+
+My name is Forrest, I am a Full-Stack Web Developer with knowledge in HTML, CSS, Javascript, React, Node.Js, and Python.
+I reside in Thousand Oaks, California and I am enrolled in Lambda School. I enjoy coding, art, and music. 
+
+What do you know about our company?
+
+I know you guys are an online school dedicated to teaching the fundamentals of Full-Stack Web Development
+and getting people out into the field to apply those skills.
+
+Where do you see yourself in the next 3-5 years?
+
+I personally see myself working for a fairly large company using a certain avenue of my coding skills daily.
+
+Why do you want to work here?
+
+I love the environment and the initiative your company takes to get things done professionally, 
+and I personally think I can bring a lot of insight and valuable skills to the table.
+
+What makes you most qualified for this role?
+
+My experience for the past year being 100% committed to learning Web Development 
+and the persistence I have to bring that energy to the workplace.
+
+What is your greatest weakness?
+
+Getting too caught up in a problem if it isn't working the way I want it to.
+
+What is your greatest strength? 
+
+Ability to work in a team and facilitate / time-management
+
+Why do you want this job?
+
+To express myself in a friendly work environment like this one and prosper over time.
+
+Why should we hire you?
+
+My experience for the past year being 100% committed to learning Web Development 
+and the persistence I have to bring that energy to the workplace.
+
+What is your greatest professional achievement?
+
+Recording and releasing two full-length albums all by myself.
+
+What's your dream job?
+
+To artistically bring my ideas to life, whether its in music, art, or Web Development
+
+What type of work environment do you prefer?
+
+Collaborative
+
+How would your boss and co-workers describe you?
+
+Friendly, funny, and hard-working
+
+Scenario Questions
+
+A time you succeeded / Your biggest accomplishments / Your greatest challenge
+
+A time I succeeded was when I successfully created a fully-functioning marketing page for a client, 
+my biggest accomplishment was recording and releasing two full-length albums all by myself, 
+and those two things were actually my greatest challenges as well.
+
+A time you persuaded someone who did not agree with you
+
+At Jamba Juice we had a very long line and it was very busy.
+I persuaded a few team members to switch their tasks around to better ensure 
+customer satisfaction and deliver their drinks more fast and efficiently.
+
+A time you dealt with and resolved a conflict (among team members)
+
+During a build-week, we had a particular individual who truly was not a "Team Player" 
+and was being very unprofessional / rude to a fellow asset to our team. 
+We brought this to the attention of our Team leads and Section leads to handle and tackle accordingly, therefore, resolving the conflict.
+
+A time you led a team / a time you showed leadership skills
+
+One time working at Starbucks, there was two brand-new team members that were still not trained. 
+I was the only experienced worker working at the time, so I took them under my wing and 
+juggled all the tasks for the day while teaching them and ensuring customer satisfaction was constantly met.
+
+A time you dealt with stress / The most difficult problem you've encountered in your previous job, and how you solved it
+
+One time working at Starbucks, I opened the store alone at 7 AM, 
+was told no-one else would be coming into their shift, and proceeded to close the store at 3 PM. 
+Essentially I did the opening tasks (2 ppl required), mid-shift tasks (2 ppl required), and closing tasks (2 ppl required) all alone.
+
+A time you solved a problem creatively
+
+One time while I was building a website for a client, I was asked to implement a feature 
+I didn't have lots of experience with. I did some research and figured out my own way of adding 
+it to avoid copying code. It was a fun challenge.
+
+A time you had to exceed expectations to get a job done
+
+Myself along with my team went the extra mile to generate 1000 rooms for our tower maze game instead of sticking with 500.
+
+A time you showed initiative
+
+When I worked on the labs project with a few peers, I attended meetings with our stakeholder every wednesday to ensure his satisfaction of the product we were building.
+
+Tell me something that’s not on your resume
+
+I play Piano, Guitar, Bass, and Drums
+
+An example of an important goal you set and how you reached it
+
+I planned to release an album by the end of the year in January 2019. 
+I played music give or take everyday to ensure my album would be released by the end of the year and I managed to make it happen.
+
+A time you failed
+
+During a build week project mentioned prior, due to all the inner conflicts surrounding 
+the one member of our team, we ended up being unsuccessful in delivering a fully function product.
+
+
