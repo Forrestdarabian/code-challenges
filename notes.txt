@@ -74,3 +74,468 @@ And connect()  (from Redux) is a Higher Order Component (which is just a functio
 
 17. How have you used routing in Express?
 -usersRouter, celebsRouter, and server.js
+
+Semantic HTML means our tags should have a precise purpose that correlates with the way other 
+websites do the same thing (otherwise, everyone would be inventing their own syntax). 
+This has benefits in terms of both accessibility and the algorithms used by search engines.
+
+Presentational HTML is used for strictly stylistic purposes. An example would be using 
+div’s for no other reason than to achieve a specific background color or grid/flex layout effect.
+
+Headers and section tags can be used to organize content in a semantic fashion 
+that’s easy to understand. The former is often combined with an <h1> tag and/or navigation menu.
+
+Specificity describes the weight given to CSS rules, which could conflict. 
+The order goes like: elements → classes/pseudo-classes/attributes → ID’s → inline styles → !important
+
+Box Model includes margin (outer space), padding (inner space), border (optional boundary).
+
+Display properties include none (invisible), inline (able to be nested -- links), 
+block (takes up as much space as parent allows), and inline-block (same as inline but can change height/width).
+
+CSS reset is often necessary due to automatic (and undesired) spacing that defaults in browser -- 
+we eliminate by setting all box model properties to 0 -- Eric Meyer’s reset = popular approach.
+
+Flex box is useful when we want attractive spacing without manually manipulating the position 
+(at least not as much). Display: flex activates flex container. Flex items are nested inside.
+
+Media queries are used to make our apps and websites responsive on mobile devices. 
+When focused on mobile first, we typically use min-width. Desktop first would utilize max-width. 
+Regardless of approach, these CSS rules determine the breakpoints where the design changes.
+
+Design units include pixels (absolute length -- doesn’t adjust for surroundings), 
+em (relative -- adjusts but can cause weird cascading effects), and rem (relative/root -- 
+typically attached to html tag with 62.5% as it’s bad practice to explicitly change html font size, 
+which overwrites the user’s default settings -- then we can convert rem units to the power of 10, or 1rem = 10px).
+
+Preprocessing allows you to write your styles in a different language/syntax such as LESS and then 
+JS compiles them into normal CSS. LESS allows you to use variables 
+(identified with @ and used to hold essential styles) and mixins (preceded with . & used to combine class styles). 
+You can also nest media queries inside their respective element/class/ID for better readability. 
+
+Hoisting describes how functions are placed higher in the execution order to be used later 
+(i.e. the second pass applies values to referenced parameters/arguments, thus running the code). 
+That said, hoisting does not apply to function expressions.
+
+Arrow functions are fantastic for simplicity, especially when combined with the array methods; 
+however, they should not be used with event handlers or object/prototype methods.
+
+Closure refers to how functions look outside their scope -- analyzing the lexical environment -- 
+as needed to determine the context in which its program or operations should run. 
+
+Callback functions are passed into other functions as arguments. A good example: 
+promises, which asynchronously execute given code depending on whether they’re resolved or rejected. 
+
+Immutability describes how we often want to avoid modifying (mutating) the data received. 
+Array methods map, filter, and reduce are the best ways to transform an array without mutation.
+
+This can refer to many things (impossible to tell without intel). Globally, it refers to the window. 
+Followed by a dot + method call = previous object. In a constructor = instance of new object. 
+Combined with .call or .apply = explicitly defined. 
+
+Prototype is a property attached to all objects by default. It’s used to attach methods/props 
+to child functions or objects (i.e. they “inherit” from a parent).
+
+Class definitions are syntactic sugar that became possible with ES6. The class foundation is a 
+constructor function specifying an object’s attributes. It’s super simple to extend a 
+class (animal) into a child (dog). Attach “extends Parent” to class def and call super() in constructor. 
+This = shortcut that allows us to skip .bind, .call, .prototype, and other inefficient syntax stuff.
+
+Document object model (DOM) is an object representation of how HTML elements are laid out 
+on the website (document). It provides an interface we can use to manipulate the page layout. 
+DOM’s structure is essentially a binary tree with elders (html/body) on top and the “youngest” nodes on bottom. 
+
+Event listeners and handlers are used to add dynamic elements to a previously static website. 
+Listeners are combined with a callback (event handler) specifying what should change when an event transpires -- 
+i.e. clicking a form input should cause it to come into focus.
+
+Event propagation occurs when we trigger an event on a child and the same event triggers on every 
+parent element all the way up to the body. Using the method event.stopPropagation() can be used to
+prevent this behavior when it results in undesired consequences. 
+
+Components are reusable pieces of code that can be used when you want more than one element to share 
+the same style or functionality. While this is most commonly seen in React, we can also use the 
+same theory stylistically by creating a base style with a preprocessor and then importing it as 
+needed to relevant files. Or we stick the code inside a function to avoid repetition. 
+
+
+Asynchronous code is used when we don’t want the program to run immediately upon load. 
+This is often used when we are waiting for data to come back from a server. 
+An easy way to visualize: the setTimeout function, which has a callback that doesn’t execute for x-seconds.
+
+Promises are an async operation that comes with a “then” and “catch” attached. 
+The “then” specifies what happens when the code runs successfully (promise is resolved). 
+The “catch” covers the situation where the code results in failure or error (promise is rejected). 
+
+HTTP is a network protocol or set of rules that govern the way “clients” (browser/front-end) 
+can and should communicate with “servers” (database/back-end). HTTP methods are used to 
+create, read, update, and delete (CRUD) user info on the web. 
+
+Axios is a Javascript library that simplifies the process of using CRUD operations with HTTP requests. 
+Every request includes an async promise that either resolves the request or returns an error 
+message explaining why it failed. Common endpoints are get, post, put, and delete.
+
+Separation of concerns is the paradigm behind React components. The goal is to create code 
+that is concentrated on accomplishing one thing. The result is programs that are easier to debug and test in isolation. 
+
+Declarative programming is another core concept of React. Instead of telling the computer 
+what we want it to do step-by-step, as in a for loop that imperatively doubles each array index, 
+we could instead say: myArray.map(double) or “Map over the array and double its elements.” 
+Since many people could work in the same code base, this is good as it’s easier to understand.
+
+Conditional rendering is when you want to specify conditions that determine what renders 
+in your application. A common way to achieve this is with a ternary operator. 
+If there’s a lightbulb and its “on” value is set to “true,” it would be yellow. Otherwise (false), 
+it would be white instead. We’d likely use syntax such as !on to change its state to the opposite condition on each click.
+
+Modular programming describes the practice of separating the functionality of a program into 
+separate modules (or “components” in React) that can be imported and exported as needed. 
+Typically, the App would be the host of every other module relevant to a particular application.
+
+The effect hook is used to manage side effects inside our React app. It accepts a callback as its first argument. 
+Without a second argument, the effect will fire after every change, which can lead to infinite loops. 
+Often we should pass in a dependency array that specifies the property that should be observed; 
+with that addition, the effect hook only runs when that prop changes. Alternatively, 
+pass an empty array to specify we only want the effect to run on the initial mount.
+
+Styled components allow you to write CSS rules inside your React app in an explicit fashion. 
+Combined with JSX you can contain your HTML, CSS, and Javascript in one place for a highly convenient 
+work environment where bugs are easy to find and fix.
+
+Client side routing is a huge benefit of React. Instead of having to connect with a server 
+and reload an entire webpage, we can simply obtain that specific resource (state) rendered by 
+React, or Javascript more generally, at the click of a button. 
+
+Routes declare what components should be rendered at certain paths/URL’s a user requests. 
+We must attach an exact path to base URLs (‘/’) or they will also match subroutes on a website 
+and try to render both at the same time. Links connect routes for smooth navigation to pages. 
+Our app must be wrapped by a Router tag for the above behaviors to take effect.
+
+Dynamic routing is achieved by encasing an interpolated string literal with object brackets. 
+Then we can map over the user or (insert individual piece of big dataset available here) ID’s 
+and render the requested asset without repetitive code: <Link to={`users/${user.id}`}>
+
+Spread operators can be used to prevent a tricky default object behavior. 
+If you try to clone an object without adding …, you are merely creating a reference to its location in memory. 
+The dots effectively “spread” the object data inside of a new variable piece-by-piece. 
+We can use this tool in React handleChange form events to capture input and overwrite previous user/pass values. 
+
+Computed properties allow you to “compute” a property based on the result of an evaluated expression. 
+This theory can be practiced in React by attaching “names” to each form element -- 
+i.e. email, username, password -- and then adding [event.target.name]: event.target.value 
+to our handleChange function. Now we can write one onChange event that covers every single input.
+
+Form validation is huge as we want users to create strong passwords that are hard to hack. 
+Several strategies can achieve the same goal. We could simply compare their input to a 
+regular expression specifying all the qualifiers for a proper password. 
+Or we could use a library like Yup, which contains methods that make it simple to add specifications 
+and create error messages.
+
+Integration tests verify several units of an application work together as expected. I.e. a login form 
+that accepts user input and redirects to a success/confirmation page. End to end tests ensure users 
+can interact with the app properly and simulate real events like scrolling/clicks. 
+Arrange, act, assert (AAA) describes a common testing pattern where we set up a 
+webpage, simulate user actions, and confirm they caused the expected outcome. 
+
+Class components allow us to tap into the React lifecycle. 
+The rise of state hooks allowed us to achieve the same thing in functional components (which may be stateless). 
+Key differences include the use of extends, constructor, and super as seen in normal Javascript classes. 
+Also like classes, we use the this keyword to create a state object and define its initial property values. 
+We also must render our return statement before anything will display on the screen. 
+When state is modified, we use the this.setState method to pass in an updated value. 
+
+To render state in a class component, we use {this.state.syntax} (minus “.state” on methods). 
+If we pass the state object to a child component via props, we render it with {props.syntax}.
+React lifecycle includes three essential phases. 
+Birth/mounting is when a component is born (includes render and componentDidMount). 
+Growth/updating involves state updates (includes setState and shouldComponentUpdate). 
+Death/unmounting removes the component from the screen (includes componentDidUnmount). 
+
+Stateful logic describes functions built into a component that are capable of managing state. 
+An obvious example would be a handleChange method. Custom hooks are stateful and able to apply 
+non-visual behavior in a customized fashion that fits a unique situation. I.e. 
+we could build a useInput custom hook to handle changes made to any number of form inputs.
+
+Redux is established on the principle that global state should be immutable. 
+Its data is contained in a state tree called the store. 
+State updates are handled by dispatched actions that are then processed by a reducer 
+which accepts the previous state and returns a new state. 
+The goal is to make state management a reliable process that can easily be predicted 
+based on the structure of our endpoints, actions, and associated errors.
+
+Pure functions, a big part of the reducer pattern, return a new state without any side effects 
+to the previous state. An example would be a counter that’s capable of returning an updated count -- 
+plus or minus one -- without laying a finger on the previous total. 
+Note: the useReducer hook is another way to accomplish the same thing without the extra baggage that comes with Redux.
+
+Actions are simply objects that include a type property specifying its exact activity (increment) -- 
+inside the reducer, we write conditionals to cover every type of action, and specify how 
+state should be affected when a particular action is dispatched: return { count: state.count + 1 }. 
+When our action requires custom or inputted data to work, we instead return the payload. 
+Actions are often stuck inside switch statements to avoid a neverending list of conditionals. 
+
+We must import connect from react-redux and map state to props by simply returning an object with mapped: 
+state.properties. At the bottom of the component, we: 
+export connect, pass MSTP as first argument, pass an empty object as second, 
+and then instantly return the higher order component like so: 
+export default connect(mapStateToProps, {})(ComponentName). 
+Note: when we use action creators in a connected component, they go inside the object brackets. 
+
+Middleware is used to intercept an action, run a function (perhaps a means of verifying a user), 
+and then dispatches to the reducer as usual. A basic example would be a logger that prints 
+data to the console for ease of debugging before performing each action. We must apply middleware 
+to the store within our Index file for it to kick in. 
+
+Thunk describes a function returned by another function within an application. 
+Redux-thunk middleware allows us to dispatch actions in an asynchronous fashion, which is useful 
+when we use API calls that require a .then or .catch statement. 
+
+Context API is useful with global state that would be cumbersome to pass as props through every level of a React app. 
+Examples include user preferences such as language, location, etc. 
+Context values are passed through a provider and consumed by a useContext hook that accepts the 
+relevant user context as an argument before it may be rendered to the screen.
+
+Tokens are used to authenticate a user before giving them access to private areas of an app. 
+To access a token, we simply call localStorage.getItem(‘token’) and assign the result to a var. 
+We should also return axios.create, pass headers into the object, and then specify like so: 
+“Authorization: token.” The above activity typically occurs in an axiosWithAuth component. 
+Next, call localStorage.setItem(‘token’, res.data.token) in the log-in API call to store a token.
+
+Private routes are used to protect and secure a user’s data. 
+They check to see if a user is authenticated. If so, the requested resource renders. 
+If not, it redirects to the log-in page. Typically, the same code used to get a token from local storage 
+is placed inside a render block. A ternary operator is used to to load the component with a 
+token or redirect to login without it. Meanwhile, the logic to set a token would be placed inside the 
+.then of API post to /login.
+
+Node is a runtime environment, or program that runs other programs, 
+which can be used to run and execute Javascript applications outside of the browser. 
+Node allows us to use Javascript for tasks that previously required learning another 
+language such as Python, Java, Ruby, or C++. We use Node to create servers that can exchange 
+data with clients by utilizing JSON (JavaScript Object Notation).
+
+Express is a Node module that contains middleware used to read request and response objects -- 
+perform some operation on them -- and then return the requested resource or error message. 
+It also allows us to create routes that specify which area of a website users want to access and what 
+they hope to do (get, post, edit, or delete content) as well as relevant HTTP status codes 
+(i.e. 200 = found, 201 = created, 202 = accepted, 400 = bad request, 401 = unauthorized). 
+To make an Express route reusable, grab ID from req.params.id and add a colon before the /:id.
+
+RESTful API’s are considered a best practice due to their simplicity and scalability. Principles include: 
+everything is a resource; resources have their own unique URL; resources can have multiple representations; 
+communication is done via stateless protocol (HTTP); resources are managed by HTTP methods. 
+Luckily, these theories are easily put into practice with Express. 
+
+There are three environments we may use before deploying an app to the web. 
+Development is the default and used while we are building the base structure. Testing is used when 
+ready to confirm the routes behave correctly. Production is turned on after we complete the tests 
+and ensure our app works. We must specify which environment to use within a package.json file as 
+well as setting up our “start” (node index.js) and “server” (nodemon index.js) under “scripts.” 
+
+Heroku is used to deploy. Process involved: import dotenv; create a .env file in root folder; inside, 
+type “PORT=4000”; and make server port dynamic = “process.env.PORT || 5000.”
+
+Databases are collections of organized data that can be retrieved and manipulated with ease. 
+Data persistence helps us safely store and protect data that isn’t accessed very often. 
+Relational databases group related data (customer, payment method, subscriptions) together.
+SQL and Knex are two popular ways to sort, select, insert, delete, and update data in tables.
+
+SQLite is a database management system we can use to test any data saved in a .db3 file.
+
+Database schema describes the form/shape of our data: field names, number of columns, relevant constraints 
+like not null (value can’t be empty), unique (value can’t be repeated), etc. 
+Primary keys are automatically assigned a unique ID to separate each data entry from others. 
+Foreign keys connect a data point appearing in more than one table with the original entry. 
+To link the shared table data together, we use a join query and specify which entries to select.
+
+Migrations make databases accessible to users (or ourselves when testing). 
+They are made upon completion and rolled back as needed when we make a mistake or need to make an edit. 
+When done, type knex migrate:latest into the terminal to make our most recent table available. 
+Seeds can set and reset sample data to fill our tables and confirm their structure is correct.
+
+Normalization is the process of eliminating redundancy and maximizing consistency of tables. 
+Each record should have a primary key. No fields should be repeated or irrelevant to key data. 
+Entries shouldn’t contain more than one data point. When it gets difficult to fulfill any of these principles, 
+this is typically a sign we need to separate the information into two or more tables. 
+
+Three types of table relationships include one to one (every bank has one financial projection), 
+one to many (every bank has many employees), and many to many (many banks have many ATMs 
+that can be used by many customers with many debit cards in many different locations). 
+Cascades can be used on table update or delete when a record is referenced in several places and 
+the change should affect entries spread among the different relational datasets. 
+
+Authentication verifies the identity of a user. Authorization determines what type of access they should have 
+(i.e. paid members see more stuff than those with a free account). 
+Auth C activities include registration, log-in/log-out, and password reset. 
+Passwords should never be stored in plain text because then it’d be easy for a hacker to access a user’s info. 
+Encryption and hashing are two ways to secure that info. 
+Cryptographic hashing is the preferred method because encrypted passwords can be decrypted to original values 
+and then used on other sites. 
+
+Sessions allow servers to store information about a client. 
+They can be used to persist data like username and password so they don’t have to be entered on every API request. 
+Sessions are combined with cookies, which verify a server and client are allowed to send data to each other. 
+Servers accomplish this with a Set-Cookie header that receives the session ID as a value. 
+
+JSON web tokens (JWT) transmit data from server to client inside a JSON object. 
+Every JWT contains a header (specifies algorithm used to make), payload (user permissions) 
+and signature (base 64 string encoding header and payload together, then signing with a secret). 
+Integration tests are used on endpoints because the goal is to make sure different parts of our system -- 
+front-end and back-end -- work together as expected. Supertest is a great module to write tests for a Node codebase. 
+We want to make sure endpoints return the correct status code for a given input, return the data 
+in an expected format, and verify it contains the right content. 
+
+End to end tests are appropriate for testing queries to a database. 
+To avoid polluting the actual database, we create a separate one for the purpose of testing. 
+When running seeds/migrations on our test data, we must add --env=testing to the terminal command. 
+It’s often helpful to clear our data before running each test and this can be achieved with a truncate command. 
+
+Programs are sequences of instructions that specify how to perform a computation. 
+Every programming language includes: input (data received from keyboard, file, network, etc); 
+output (data rendering on screen, saved to file, or sent over network); arithmetic/logic (math stuff); 
+conditional execution (attaching statements to conditions);
+ and repetition (loops that repeat a computation with a slight modification on every pass). 
+
+Python lingo is slightly different from Javascript. Lists are sequences of values placed 
+inside square brackets that may be modified. Dictionaries are key/value pairs 
+(aka “items”) placed in curly brackets -- can add items by typing a dict variable, enclosing a key in 
+square brackets, and assigning a value. Tuples are immutable lists surrounded by a parenthesis vs. 
+array-like syntax. Sets are like a dictionary but every element must be unique and there’s no 
+values (only keys); like tuples, entries may not be modified and unlike tuples, you can insert data after creation. 
+
+Four step problem solving process: UPER. 
+First, understand the problem on a deep level. Rephrase the problem description in your own words. 
+Determine any limitations in terms of what and how big/small inputs and outputs can be. 
+Figure out any time/space complexity restrictions. Draw out the data flow so you can visualize 
+where it goes in each step. Second, plan a process before you write any code by writing comments 
+containing the steps you’ll take. If stuck, try to solve a simpler version of the problem. 
+Third, execute. Fourth, reflect RE: how to make it better.
+
+Object Oriented Programming (OOP) uses objects to model data and behaviors. 
+This isn’t the same as procedural programming, where you write a list of instructions telling a PC what to do. 
+As programs become more complex, this can lead to spaghetti (difficult-to-maintain) code. 
+
+Encapsulation closes outside elements off from the innermost object’s interior workings as there 
+is no need for them to be aware of every intricacy. A remote control doesn’t need to know how TV’s work 
+in order to turn down the volume. The goal is to prevent as much needless trickle as possible as this 
+will minimize potential consequences of cascading in the future. 
+
+Abstraction isolates the few relevant details worth dealing with. We only model what a 
+system absolutely needs to perform a given task. A Car object might have many different methods, 
+but the Mechanic only needs a few (change_oil, rotate_tires, check_engine, etc). 
+And a Driver only needs a small number (apply_brakes, press_gas, start_engine, and such). 
+Inheritance describes the way objects can have parent/child relationships where they inherit 
+some attributes and develop some that are unique to them. Every Animal has a species and preferred diet. 
+But all animals have different methods of communicating (woof, meow, chirp).
+
+Polymorphism allows us to treat classes differently depending on their attached subclass. 
+Every part of a gaming board has a move class. But every distinct chess piece moves on the board in a distinct fashion. 
+So the move methods of pawn, rook, etc. will override the default.
+
+Nouns become object classes. Verbs associated with classes become methods. 
+Adjectives become attributes. If we don’t use all three types of grammar in a problem, 
+it might be wise to abstract away the unnecessary. Verbs can be functions, nouns a data structure, 
+and adjectives a boolean (i.e. isNight = True or False). 
+
+Python classes have three special definitions denoted by a leading and trailing __double underscore__. 
+Init specifies the attributes that must be attached to new class variables and use self 
+(as compared to “this” in JS) in the class body. Str specifies how to format print statements; 
+as the object default isn’t helpful, it’s wise to explicitly declare your own. 
+Repr is similar to str but instead influences the appearance of return statements. 
+Like str, it’s often wise to write our own.
+
+Python scope is searched in the order of LEGB: local (within function), 
+enclosing (outer area of nested functions), global (without function), and built-in (Python commands such as len/pow).  
+
+Composition involves an “has-a” relationship whereas inheritance assumes an “is-a” one. 
+Pitbulls are dogs, so they would inherit from the parent. Ducks aren’t bills or tails; 
+they have bills and tails, and thus these classes would be combined together to achieve the desired result. 
+The Duck class would have “bill” and “tail” properties. At the same time, there’d be a Bill/Tail class. 
+Then we’d assign values to bill and tail instances. Lastly, pass those as arguments to the duck. 
+Aggregation has a slight twist (dogs have leashes, but can also exist without a leash).
+
+Linear search begins at the start of a dataset and iterates through each item until we either find the target 
+or reach the end. Binary search takes an ordered set of data and cuts it in half -- 
+based on whether the target is larger or smaller than the remainder -- on each pass. 
+
+Iterative sorting algorithms sort a list of data during one pass or “iteration” at a time. Examples:
+Insertion sort assumes the first element is “sorted.” Then it compares the next index to identify 
+its correct position within the sorted area. The runtime is polynomial or O(N^2). 
+Selection sort finds the smallest element and swaps it with the current occupant until the list is correctly sorted. 
+The run time is also O(N^2). Bubble sort compares a left and right neighbor to determine 
+which is smaller and swap as needed until the large items “bubble up” to the top. Runtime is O(N^2).
+
+Recursion requires a base case at which the operation ends and functional logic that runs 
+until said base case is reached. Example: a factorial program that returns 1 which input n reaches 0. 
+Until then, it would return n * recurse_factorial(n - 1).
+
+Recursive or “divide and conquer” algorithms are able to achieve more work with each pass. 
+Merge sort divides the entire collection in half until they’re broken down into lists with a 
+length of one (8 → 4 → 2 → 1) before merging them back together in the right order (1 → 2 → 4 → 8). 
+Runtime is O(n log(n)). Quick sort chooses a pivot before moving all smaller numbers to the 
+left and larger ones to the right. Then it repeats the same process on both sides until they’re sorted. 
+Best case runtime is O(n log(n)) and worst case is O(n^2).
+
+Big O notation provides a secret code used to understand runtime and space complexity. 
+O(1) is constant and unaffected by input size. O(log n) is logarithmic and slowly affected by the input. 
+O(n) is linear and directly affected by the input. O(n log n) is linearithmic and mildly affected by the input. 
+O(n^2) is polynomial and quickly affected by the input. O(2^n) is exponential and very quickly affected by the input. 
+O(n!) is factorial and disastrously affected by the input.
+
+Caching and memoization is a good way to improve upon a first pass solution that is slow. 
+The idea is to persist calculations that have already been performed so we can simply return 
+the store its result instead of running the equation again. This eliminates many needless operations.
+
+Linked lists are similar to arrays but store each element as a separate node vs. a contiguous block of memory. 
+Singly linked lists contain a pointer to the “next” node unless it’s the tail (end). Doubly linked lists 
+also contain a “previous” pointer unless it’s the head (front). Queues (FILO) and stacks (LIFO)
+are often used in combination with linked lists. Binary search trees are able to reference a 
+left (lower) and right (greater) node. Depth first traversals explore each branch until reaching a dead end. 
+Breadth first goes across a tree’s width rather than below its height.
+
+Hash tables are the foundational data structure from which objects and dictionaries are built. 
+Under the hood, hash tables are simply arrays with elements indexed by a hashed key. 
+Linked list chaining is used to avoid collisions: more than one element being assigned the same index -- 
+hash table search/insert/deletion has a best case runtime complexity of O(1) and worst O(n).
+
+Blockchain is a structure of publicly available transactions (used for Bitcoin and similar units) 
+linked together as blocks in a chain. Each block is secured by a mined proof, or arbitrarily 
+hard problem to solve, that would take the average computer 100 years to solve. Consensus is determined by 
+the longest chain; in other words, it is difficult to hack, because you’d have to rewrite history 
+not just for the last block, but for all the others that preceded it. 
+
+Graphs are sets of data linked by vertices (nodes) and edges (lines/pointers connecting verts) used to reflect 
+relationships between connected roads, subways, computer networks, and etc. Directed graphs must be 
+traversed one way based on arrow direction. Undirected graphs lack arrows and resemble a mutual exchange 
+or reciprocity. Cyclic graphs allow you to revisit nodes you’ve already passed. 
+Acyclic graphs only let you traverse once. Weighted graphs give edges a value 
+(i.e. length of road or estimated travel time). Note: graphs can have multiple “types.”
+
+Adjacency lists contain a list of vertices and their connections, formatted like: 
+“A”: {“B”, “C”}. Adjacency matrices reflect the same representation but in the form of a 2D array where 0 means 
+“unconnected” and 1+ means “connected” (with the given number specifying its weight). 
+BFS explores the width of a graph, inspecting each path incrementally (good for route finding). 
+DFS explores the depth of a graph, inspecting each path completely (good for maze solving). 
+Connected components are small subgraphs (mutual friends) in a big graph (FB users).
+
+A number’s count is always the same -- “12 apples is 12 apples” -- regardless of the base used. 
+Bases are merely represented with different digits. Decimals are the familiar base 10 (0-10). 
+Binary or base 2 is how computers speak (1’s and 0’s only). Hexadecimal or base 16 is similar to CSS colors 
+(count 0-9, then A-F, and alternate back and forth as you go).
+
+Random access memory (RAM) can be read or changed in any order (big array of bytes). 
+CPU instruction is a byte(s) telling RAM what to do and how to do it. 
+CPU registers store data and instructions for faster access. System bus is wires connecting 
+motherboard, RAM, CPU. Concurrency/parallelism describes how CPU multitasks (handle load events while you code), 
+which is done with an assist from interrupts allowing CPU to switch from one task to another. 
+
+Stacks are used by the CPU to temporarily store values when a register is needed to perform another task. 
+They also save a register’s data and restore it after an interrupt or function call. 
+Their structure includes an array (RAM) for storing values, pointer referencing top element, 
+and push/pop instructions. Stack pointer (SP) is decremented upon push and incremented on pops. 
+Register values are stored to RAM post-push. RAM memory is saved to a register pre-pop. 
+
+Subroutines are a simple call/return mechanism used to manage functions at assembly level. 
+CPU has no awareness of function names, arguments/parameters, or return values. 
+All it does is call a subroutine (push address of next instruction to stack) and return from said 
+subroutine (pop top value from stack). 
