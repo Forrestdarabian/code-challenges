@@ -21,6 +21,8 @@ function equalizeArray(arr) {
   return arr.length - maximum;
 }
 
+// o(n)
+
 function frequencyQueries(queries) {
   // first we define our variables
   const frequencies = [];
@@ -37,7 +39,8 @@ function frequencyQueries(queries) {
     if (action === 1 || action === 2) {
       // set our index equal to the value of our frequencies array
       index = frequencies[value];
-      // if we can pass in index to our frequencyTracker, then we decrement it, if not, return null
+      // if we can pass in index to our frequencyTracker,
+      // then we decrement it, if not, return null
       frequencyTracker[index] ? --frequencyTracker[index] : null;
     }
     // If the action is 1 we set or increase our counter at the given index.
@@ -56,12 +59,14 @@ function frequencyQueries(queries) {
     if (action === 1 || action === 2) {
       // set our index equal to the value of our frequencies array
       index = frequencies[value];
-      // if we can pass in index to our frequencyTracker, then we increment it this time, if not, set it to one
+      // if we can pass in index to our frequencyTracker,
+      // then we increment it this time, if not, set it to one
       frequencyTracker[index]
         ? ++frequencyTracker[index]
         : (frequencyTracker[index] = 1);
     }
-    // If the action is 3 we check whether the value in our frequencyTracker is "true" or "not 0" or "nor undefined".
+    // If the action is 3 we check whether the value in our frequencyTracker
+    // is "true" or "not 0" or "nor undefined".
     if (action === 3) {
       // if its greater than 0, return one, else return 0
       result.push(frequencyTracker[value] > 0 ? 1 : 0);
